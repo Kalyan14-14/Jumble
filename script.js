@@ -7,9 +7,10 @@ const scoreDisplay = document.getElementById("score");
 const coinsDisplay = document.getElementById("coins");
 const levelDisplay = document.getElementById("level");
 const message = document.getElementById("message");
-const startBtn = document.getElementById("startBtn");
-const jumpBtn = document.getElementById("jumpBtn");
-const restartBtn = document.getElementById("restartBtn");
+const overlay = document.getElementById("overlay");
+const instructions = document.getElementById("instructions");
+const startButton = document.getElementById("startButton");
+const jumpButton = document.getElementById("jumpButton");
 
 const groundY = 340;
 
@@ -57,7 +58,7 @@ function startGame() {
 
   resetGame();
   playing = true;
-  message.hidden = true;
+  overlay.style.display = "none";
 
   if (animationId !== null) {
     cancelAnimationFrame(animationId);
@@ -283,21 +284,16 @@ function endGame() {
   gameOver = true;
   playing = false;
 
-  message.hidden = false;
-  message.innerHTML = `
-    <h2>GAME OVER!</h2>
-    <p>Score: ${Math.floor(score)} | Coins: ${coinCount}</p>
-    <button id="playAgainBtn" type="button">PLAY AGAIN</button>
-  `;
-
-  document.getElementById("playAgainBtn")
-    .addEventListener("click", startGame);
+  message.textContent = "GAME OVER!";
+  instructions.textContent =
+    "Score: " + Math.floor(score) + " | Coins: " + coinCount;
+  startButton.textContent = "PLAY AGAIN";
+  overlay.style.display = "flex";
 }
 
 // Button controls
-startBtn.addEventListener("click", startGame);
-jumpBtn.addEventListener("click", jump);
-restartBtn.addEventListener("click", startGame);
+startButton.addEventListener("click", startGame);
+jumpButton.addEventListener("click", jump);
 
 // Keyboard controls
 document.addEventListener("keydown", event => {
