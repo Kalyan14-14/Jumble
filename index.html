@@ -14,7 +14,7 @@
     </header>
 
     <section class="screen" aria-label="Neon Coin Runner game">
-      <canvas id="game" width="900" height="420"></canvas>
+      <canvas id="gameCanvas" width="900" height="420"></canvas>
       <div class="hud">
         <div>SCORE <span id="score">0000</span></div>
         <div>COINS <span id="coins">00</span></div>
@@ -22,13 +22,13 @@
         <div>BEST <span id="best">0000</span></div>
       </div>
       <div class="overlay" id="overlay">
-        <h2 id="overlayTitle">READY PLAYER ONE?</h2>
-        <p id="overlayText">Jump over hazards, collect glowing coins, and survive as the arcade gets faster. Every 10 coins unlocks a bonus. Watch out for low barriers, tall blocks, and double trouble!</p>
-        <button id="startBtn">START GAME ▶</button>
+        <h2 id="message">READY PLAYER ONE?</h2>
+        <p id="instructions">Jump over hazards, collect glowing coins, and survive as the arcade gets faster. Every 10 coins unlocks a bonus. Watch out for low barriers, tall blocks, and double trouble!</p>
+        <button id="startButton">START GAME ▶</button>
       </div>
     </section>
 
-    <button class="mobile-jump" id="jumpBtn">JUMP ⬆</button>
+    <button class="mobile-jump" id="jumpButton">JUMP ⬆</button>
     <p class="controls">
       <span><b>SPACE / ↑ / W</b> jump</span><span>•</span>
       <span><b>CLICK / TAP</b> to jump</span><span>•</span>
