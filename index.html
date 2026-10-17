@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Coin Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cabinet">
+    <header>
+      <h1>NEON COIN RUNNER</h1>
+      <p class="subtitle">INSERT COINS • DODGE THE GLITCH • BEAT YOUR HIGH SCORE</p>
+    </header>
+
+    <section class="screen" aria-label="Neon Coin Runner game">
+      <canvas id="game" width="900" height="420"></canvas>
+      <div class="hud">
+        <div>SCORE <span id="score">0000</span></div>
+        <div>COINS <span id="coins">00</span></div>
+        <div>LEVEL <span id="level">01</span></div>
+        <div>BEST <span id="best">0000</span></div>
+      </div>
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">READY PLAYER ONE?</h2>
+        <p id="overlayText">Jump over hazards, collect glowing coins, and survive as the arcade gets faster. Every 10 coins unlocks a bonus. Watch out for low barriers, tall blocks, and double trouble!</p>
+        <button id="startBtn">START GAME ▶</button>
+      </div>
+    </section>
+
+    <button class="mobile-jump" id="jumpBtn">JUMP ⬆</button>
+    <p class="controls">
+      <span><b>SPACE / ↑ / W</b> jump</span><span>•</span>
+      <span><b>CLICK / TAP</b> to jump</span><span>•</span>
+      <span><b>R</b> restart</span>
+    </p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
